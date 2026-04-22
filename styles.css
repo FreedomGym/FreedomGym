@@ -1,0 +1,146 @@
+:root {
+    --bg-dark: #000000;
+    --accent-white: #ffffff;
+    --text-gray: #d1d1d1;
+    --overlay: rgba(0, 0, 0, 0.75);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--accent-white);
+    overflow: hidden;
+}
+
+/* Background image with high-end gym feel */
+.hero-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/12345.JPG');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.9) 100%);
+    z-index: 0;
+}
+
+.content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-family: 'Bebas Neue';
+    font-weight: 900;
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    letter-spacing: 12px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    line-height: 1;
+}
+
+.tagline {
+    font-weight: 300;
+    font-size: clamp(0.8rem, 3vw, 1.1rem);
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    color: var(--text-gray);
+    margin-bottom: 60px;
+    border-top: 1px solid #d1d1d1;
+    padding-top: 15px;
+}
+
+.maintenance-status {
+    max-width: 600px;
+}
+
+.maintenance-status p {
+    margin: 50px 0 50px 0;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-weight: 400;
+    color: var(--text-gray);
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 15px 35px;
+    border: 2px solid var(--accent-white);
+    color: var(--accent-white);
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    font-size: 0.8rem;
+}
+
+.cta-btn:hover {
+    background-color: var(--accent-white);
+    color: var(--bg-dark);
+}
+
+.footer-info {
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--text-gray);
+    letter-spacing: 1px;
+    line-height: 2;
+}
+
+.footer-info a {
+    color: var(--accent-white);
+    text-decoration: none;
+}
+
+/* Loading Animation */
+.pulse {
+    width: 40px;
+    height: 2px;
+    background: var(--accent-white);
+    margin: 20px auto;
+    animation: pulse-width 2s infinite ease-in-out;
+}
+
+@keyframes pulse-width {
+    0%, 100% { width: 10px; opacity: 0.3; }
+    50% { width: 60px; opacity: 1; }
+}
